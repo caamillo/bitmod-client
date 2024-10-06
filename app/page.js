@@ -54,7 +54,7 @@ export default function MapPage() {
   }, [token]);
 
   const bookDevice = async (name) => {
-    const response = await fetch(`http://localhost:5001/api/book?name=${name}`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/api/book?name=${name}`, {
       headers: {
         'Authorization': `Bearer ${token}`,
       },
@@ -65,7 +65,7 @@ export default function MapPage() {
   }
 
   const unbookDevice = async () => {
-    const response = await fetch(`http://localhost:5001/api/unbook`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/api/unbook`, {
       headers: {
         'Authorization': `Bearer ${token}`,
       },

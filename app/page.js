@@ -79,7 +79,7 @@ export default function MapPage() {
     <div className='relative'>
       <div data-booking={booking} className='fixed top-0 left-0 w-screen h-screen bg-black/50 backdrop-blur-md transition-all opacity-0 data-[booking=true]:opacity-100 pointer-events-none data-[booking=true]:pointer-events-auto z-[99999] flex justify-center items-center'>
         <div className='px-5 py-3 rounded-lg bg-white'>
-          <h1 className='text-lg font-semibold'>You already are booking</h1>
+          <h1 className='text-lg font-semibold'>You are already booking</h1>
           <button onClick={unbookDevice} className='w-full py-2 text-lg bg-red-400 text-white rounded-lg mt-2 font-medium'>Unbook</button>
         </div>
       </div>

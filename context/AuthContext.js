@@ -20,7 +20,7 @@ export function AuthProvider({ children }) {
   }, [router]);
 
   const login = async (email, password) => {
-    const response = await fetch(process.env.NEXT_PUBLIC_API_ENDPOINT + '/login', {
+    const response = await fetch(process.env.NEXT_PUBLIC_URL + '/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

@@ -19,7 +19,7 @@ export default function MapPage() {
   useEffect(() => {
     const fetchDevices = async () => {
       setLoading(true); // Set loading state to true
-      const response = await fetch(process.env.NEXT_PUBLIC_API_ENDPOINT + '/api/devices', {
+      const response = await fetch(process.env.NEXT_PUBLIC_URL + '/api/devices', {
         headers: {
           'Authorization': `Bearer ${token}`,
         },
@@ -38,7 +38,7 @@ export default function MapPage() {
     };
 
     const fetchStatus = async () => {
-      const response = await fetch(process.env.NEXT_PUBLIC_API_ENDPOINT + '/api/status', {
+      const response = await fetch(process.env.NEXT_PUBLIC_URL + '/api/status', {
         headers: {
           'Authorization': `Bearer ${token}`,
         },
@@ -54,7 +54,7 @@ export default function MapPage() {
   }, [token]);
 
   const bookDevice = async (name) => {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/api/book?name=${name}`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/book?name=${name}`, {
       headers: {
         'Authorization': `Bearer ${token}`,
       },
@@ -65,7 +65,7 @@ export default function MapPage() {
   }
 
   const unbookDevice = async () => {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/api/unbook`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/unbook`, {
       headers: {
         'Authorization': `Bearer ${token}`,
       },
